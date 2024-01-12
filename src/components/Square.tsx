@@ -1,5 +1,3 @@
-import React from 'react'
-
 type Player = "X" | "O" | "DRAW" | null;
 
 const Square = ({winner, value, onClick}
