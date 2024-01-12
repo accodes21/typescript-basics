@@ -1,6 +1,6 @@
 import React from 'react'
 
-type Player = 'X' | 'O' | null
+type Player = "X" | "O" | "DRAW" | null;
 
 const Square = ({winner, value, onClick}
     :{
@@ -9,10 +9,10 @@ const Square = ({winner, value, onClick}
         onClick: () => void
     }) => {
     if(!value){
-        return <button onClick={onClick} disabled={Boolean(winner)}/>
+        return <button className='square' onClick={onClick} disabled={Boolean(winner)}/>
     }
   return (
-    <button disabled>{value}</button>
+    <button className={`square square_${value.toLocaleLowerCase()}`} disabled>{value}</button>
   )
 }
 
